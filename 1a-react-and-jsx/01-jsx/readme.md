@@ -2,11 +2,73 @@
 
 ReactJS is a library to build active User Interfaces, thus rendering is one of the integral parts of React. React provides the developers with a package `react-dom` to access and modify the DOM. Let's see in brief the need for this package.
 
-# What is the DOM and React's Use of a Virtual DOM?
+# What is the DOM and React's Virtual DOM?
 
 DOM, abbreviated as Document Object Model, is the logical representation of a webpage. In easier words, DOM is a tree-like structure that contains all the elements and properties of a website as nodes in the tree. DOM provides a language-neutral interface that allows accessing and updating of the content of any element of a webpage.
 
-Before React, Developers directly manipulated the DOM elements which resulted in frequent DOM manipulation, and each time an update was made the browser had to recalculate and repaint the whole view according to the particular CSS of the page, which made the total process to consume a lot of time. As a betterment, React brought into the scene the virtual DOM. The Virtual DOM can be referred to as a copy of the actual DOM representation that is used to hold the updates made by the user and finally reflect it over to the original Browser DOM at once consuming much lesser time. React has great performance because instead of reloading the entire DOM tree it can make a comparison between the real DOM and the virtual one and only update what has changed leaving the unchanged parts alone.
+For example, consider the following HTML code:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div>
+      <h1>This is a Heading</h1>
+      <p>This is a paragraph.</p>
+    </div>
+  </body>
+</html>
+```
+
+The above code will be represented in the DOM as:
+
+```
+- HTML
+  - HEAD
+    - TITLE
+      - "Page Title"
+  - BODY
+    - DIV
+        - H1
+            - "This is a Heading"
+        - P
+            - "This is a paragraph."
+```
+
+The DOM is commonly represented in JavaScript as a tree of objects. Each object represents a node in the tree, and the properties of the object represent the properties of the node. For example, the DOM node representing the `<h1>` element in the example above might look like this in JavaScript:
+
+```javascript
+{
+  tagName: 'H1',
+  children: ['This is a Heading']
+}
+```
+
+And the DOM node representing the `<div>` element might look like this:
+
+```javascript
+{
+  tagName: 'DIV',
+  children: [
+    {
+      tagName: 'H1',
+      children: ['This is a Heading']
+    },
+    {
+      tagName: 'P',
+      children: ['This is a paragraph.']
+    }
+  ]
+}
+```
+
+When you update the DOM, the browser has to re-render the entire page. This can be slow and inefficient, especially for complex web applications with a lot of elements.
+
+React uses a virtual DOM to improve performance. The virtual DOM is a lightweight copy of the actual DOM. React uses the virtual DOM to keep track of the changes that need to be made to the actual DOM. When a change is made to the virtual DOM, React compares the virtual DOM to the actual DOM and only updates the parts of the actual DOM that have changed. This makes React faster and more efficient than updating the entire DOM every time a change is made.
+
 
 # JSX
 
