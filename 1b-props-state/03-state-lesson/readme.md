@@ -28,12 +28,13 @@ function Counter() {
 export default Counter;
 ```
 
-Now to add state to our component, at the top we have to import `useState`. Use shortcut `imrs` ahd hit **Tab** to get `import React, { useState } from 'react';`. Inside the component we will set up a state variable called `count` to store the number. We shall set it to zero initially.
+Now to add state to our component, at the top we have to import `useState`. Inside the component we will set up a state variable called `count` to store the number. We shall set it to zero initially.
 
 ```jsx
 import React, { useState } from "react";
 
 function Counter() {
+  // The format is:
   // const [stateVariable, setStateVariable] = useState(initialValue)
   const [count, setCount] = useState(0);
 
@@ -76,7 +77,6 @@ In components we use the `setState()` method that is available to us from state 
 
 ```jsx
 function Counter() {
-  // const [stateVariable, setStateVariable] = useState(initialValue)
   const [count, setCount] = useState(0);
 
   return (
@@ -191,12 +191,22 @@ import App from "./Fruits";
 
 What this does is it imports the `Fruits` component and renames it on the `index.js` end, so that it displays a new component instead. We will be using this technique in the future to demonstrate more things about React.
 
-Use shortcut `imrs` at the top of this file to import `useState`, and use shortcut `ffc` to create & name the functional component `Fruits`
+Import `useState`, and create a functional component called `Fruits`
 
-Next, we'll create a state variable that is an array data type. This is how it looks:
+``` js
+import React, {useState} from 'react';
+
+function Fruits() {
+
+}
+```
+
+Next, inside the component, we'll create a state variable that is an array data type. This is how it looks:
 
 ```js
-const [fruits, setFruits] = useState(["Apple", "Orange"]);
+function Fruits() {
+  const [fruits, setFruits] = useState(["Apple", "Orange"]);
+}
 ```
 
 Inside the `return()` statement, place a `<div>` as a wrapper and place the following inside of it:
@@ -221,7 +231,7 @@ Now let's create a button to add new Apples to our `fruits`:
 <button onClick={() => addFruit("Apple")}>Add Apples</button>
 ```
 
-_Note: If you are using the parameter of a function inside of an `onClick={}`, you must make it a callback function_
+_Note: If you are using the parameter of a function inside of an `onClick={}`, you must make it a callback function._
 
 If you click on the button, you will see that Apple is repeatedly added to the `h1`! Let's add more buttons to have fun with this.
 

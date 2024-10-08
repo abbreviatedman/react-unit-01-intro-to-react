@@ -34,9 +34,11 @@ In this exercise we will be building a task list that will allow users to write 
 
 8. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file.
 
-9. Next type the command `ffc` and press **Tab** to create the boiler plate code for a functional component. When the code appears, start typing the class name `App`. It should fill in the for both the class name as well as in the default export command.
+9. Next, create the boiler plate code for a functional component (including importing React and exporting the function). Name the function `App`.
 
 ```jsx
+import React from 'react';
+
 function App() {
   return (  );
 }
@@ -66,7 +68,7 @@ export default App;
 
 10. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `AddTask.js`.
 
-11. Open the **/src/AddTask.js** file and use the shortcut command `ffc` to create the basic functional component scaffolding. Name the component `AddTask`.
+11. Open the **/src/AddTask.js** file and create the basic functional component scaffolding. Name the component `AddTask`.
 
 12. Fill the empty return statement the following elements:
 
@@ -122,9 +124,9 @@ Let's create a single task with some place holder content.
 
 16. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Task.js`.
 
-17. Open the **/src/Task.js** file and use the shortcut command `ffc` to create the basic functional component scaffolding. Name the component `Task`.
+17. Open the **/src/Task.js** file and create the basic functional component scaffolding (including importing React and exporting the function). Name the component `Task`.
 
-18. Fill the empty return statement the following elements:
+18. Fill the return statement's parentheses with the following elements:
 
 ```jsx
 <li>
@@ -169,7 +171,7 @@ function App() {
 
 ## Adding Application State
 
-22. On `App.js` where the imports belong, use command `imrs` and hit the Tab key to import `useState()`
+22. On `App.js` where the imports belong, import `useState`
 
 ```jsx
 import React, { useState } from "react";
@@ -280,7 +282,7 @@ In order for the AddTask component to be able to access this method we will have
 
 Now this method can now be called outside of the `App` component inside the `AddTask` component.
 
-29. Let's head back to **/src/AddTask.js**, we would like to create a class property we will call `uniqueId` to identify each individual task. You might ask why not just use the length of array and add 1 to it each time we create a new task. This poses some issues in that our array length will always be changed as we add and also remove tasks. To solve this, we will have a dedicated number called `uniqueId` that will always continue forward by 1 each time a new task is created regardless if the array changes. This is why we are passing in the length of the initial state `tasks`, so that the `uniqueId` continues from there. This is a common strategy used for id numbers in databases as well.
+29. Let's head back to **/src/AddTask.js**, we would like to create a state property we will call `uniqueId` to identify each individual task. You might ask why not just use the length of array and add 1 to it each time we create a new task. This poses some issues in that our array length will always be changed as we add and also remove tasks. To solve this, we will have a dedicated number called `uniqueId` that will always continue forward by 1 each time a new task is created regardless if the array changes. This is why we are passing in the length of the initial state `tasks`, so that the `uniqueId` continues from there. This is a common strategy used for id numbers in databases as well.
 
 Add the following code to your AddTask component:
 

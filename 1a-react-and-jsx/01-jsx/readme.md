@@ -146,7 +146,7 @@ const header = (
 
 ## Applying CSS class styles to JSX elements
 
-In JavaScript the `class` keyword is reserved by the language so if you want to refer to a CSS class within a JSX element, then you must use the attribute `className` instead.
+In JavaScript the `class` keyword is reserved by the language, so if you want to refer to a CSS class within a JSX element, then you must use the attribute `className` instead.
 
 ```jsx
 const intro = (

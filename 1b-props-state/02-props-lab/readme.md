@@ -6,7 +6,7 @@
 
 We are going to make an archive page for a blog site that displays a list of recent articles.
 
-## Setup a new Create-React-App project
+## Set Up A New Create-React-App Project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 
@@ -32,7 +32,8 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 ## Creating the App Component
 
-8. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can create the functional component by typing the shortcut `ffc` and press the **Tab** key. This will create the create the boiler plate code for a functional component. When the code appears start typing the class name `App`. It should fill in the for both the class name as well as in the default export command.
+8. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import React and create a functional component named `App`. Don't forget to export it.
+
 9. Create a `<div>` inside of the `return()` statement.
 
 10. Add `className="App container-fluid"` into the `<div>` element. This will apply some CSS styles to it.
@@ -76,13 +77,13 @@ function App() {
 
 14. In VS Code in the File Explorer to the left right click on the **/src/** folder and select **New File**. Name the file `Article.js`.
 
-15. Open **/src/Article.js** and use the shortcut command `ffc` and press **Tab**.
+15. Open **/src/Article.js** and import React.
 
-16. When the code appears, type `Article` and add a `<div>` to the inside of the `return()` statement.
+16. Create a function called `Article` that returns a `<div>` inside of parentheses. Don't forget to export the function at the bottom of the file.
 
-17. Inside the render method, and inside the `<div>` add the class `className="article col-4"`.
+17. Inside the `<div>`, add the attribute `className="article col-4"`.
 
-18. Inside the div let's write some place filler text `Hello I'm An Article!`.
+18. Inside the `div`, let's write some place filler text `Hello I'm An Article!`.
 
 ```jsx
 function Article() {

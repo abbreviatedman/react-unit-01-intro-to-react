@@ -76,9 +76,9 @@ import Wine from "./wine"; // This is importing our component!
 ReactDOM.render(<Wine />, document.getElementById("root")); // This is rendering our component into the DOM.
 ```
 
-Our component doesn't do very much right now, but in upcoming learning modules we will cover more about class components such as passing values to them via "props" and setting and modifying "state" to allow our component to react to changes in our application. We will also be learning about lifecycle methods that allow us to tap into moments in time when the component mounts, unmounts, or updates, and much more.
+Our component doesn't do very much right now, but in upcoming learning modules we will cover more about components such as passing values to them via "props" and setting and modifying "state" to allow our component to react to changes in our application.
 
-## Functional components
+## Functional Components
 
 React supports functional components that behave similarly but are written a bit different. Let's see what our class component would look like as a functional component.
 
@@ -106,7 +106,7 @@ export default Wine;
 
 All of these ways of writing functional components will produce the same result. Now you know how to recognize them in code whatever form they may take.
 
-## Nesting components
+## Nesting Components
 
 We can nest one component inside another by including it by name inside a block of JSX code.
 

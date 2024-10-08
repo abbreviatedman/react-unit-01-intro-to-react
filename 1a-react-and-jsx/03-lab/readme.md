@@ -4,7 +4,7 @@
 
 ## Exercise overview
 
-We are going to make an goldfish forum website page by combining different components each making up a different part of the page content.
+We are going to make a goldfish forum website page by combining different components each making up a different part of the page content.
 
 ## Setup a new Create-React-App project
 
@@ -30,17 +30,13 @@ We are going to make an goldfish forum website page by combining different compo
 
 7. Move the image files from the _/assets\*\* folder outside the create-react-app project folder into the create-react-app folder _/public/\*\* this way the images will be accessible to your application.
 
-## Install Simple React Snippets Extension
-
-8. Next we will install the **Simple React Snippets** extension for VS Code. This will allow us to type short commands to generate blocks of common React code. Start by clicking the <img src="../../z-images/vscode-extensions-icon.png" width="22" height="22"> **Extensions** icon from the panel on the left side of the screen.
-
-9. In the search box at the top type `simple react snippets` and then click on the result labeled **Simple React Snippets** and then click **Install**.
-
 ## Creating the App Component
 
-10. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import react by typing the shortcut `ffc` and press the **Tab** key. When the code appears start typing the class name `App`. It should fill in the for both the class name as well as in the default export command. This will create the following code:
+10. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import react and create a functional component called App. Finally, export it at the bottom. This will create the following code:
 
 ```jsx
+import React from 'react';
+
 function App() {
   return (  );
 }
@@ -56,7 +52,7 @@ export default App;
 import App from "./App";
 ```
 
-The line at the top of the file is importing the code from App.js so index.js has access to the App class.
+The line at the top of the file is importing the code from App.js so index.js has access to the App component.
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -115,11 +111,13 @@ Let's create components for the Header, Sidebar, and Main content areas.
 
 ## Working on the Header
 
-20. Inside the **/src/Header.js** file, start by using the shortcut `ffc` and press **Tab** to create the functional component.
+20. Inside the **/src/Header.js** file, start by importing React and creating a functional component.
 
-21. Type `Header` to name the component Header.
+21. Name the component `Header`.
 
 ```jsx
+import React from 'react';
+
 function Header() {
     return (  );
 }
@@ -158,11 +156,13 @@ export default Header;
 
 ## Working on the Sidebar
 
-25. Inside the **/src/Sidebar.js** file, start by using the shortcut `ffc` and press **Tab** to create the functional component
+25. Inside the **/src/Sidebar.js** file, start by importing React and creating a functional component.
 
-26. Type `Sidebar` to name the component Sidebar.
+26. Name the component Sidebar.
 
 ```jsx
+import React from 'react';
+
 function Sidebar(){
   return (
 
@@ -212,11 +212,13 @@ export default Sidebar;
 
 ## Working on the Main Content
 
-29. Inside the **/src/Main.js** file, start by using the shortcut `ffc` and press **Tab** to create the functional component.
+29. Inside the **/src/Main.js** file, start by importing React and creating a functional component.
 
-30. Type `Main` to name the component Main.
+30. Name the component Main.
 
 ```jsx
+import React from 'react';
+
 function Main() {
   return (
 
@@ -285,7 +287,7 @@ function Main() {
 
 As an alternative to using class names and an external stylesheet sometimes you may want to use inline style in order to make the style dynamic.
 
-36. Inside the Main class before the return statement we will add the following object with CSS styles:
+36. Inside the Main component, before the return statement, we will add the following object with CSS styles:
 
 ```javascript
 const frameStyle = {
@@ -315,13 +317,13 @@ import Sidebar from "./Sidebar";
 import Main from "./Main";
 ```
 
-39. Replace the comment `{/* Header will go here... */}` with a reference to our `<Header />` component. As you can see by making our class names Uppercase it makes it easier to tell the difference between the component `<Header />` vs the html element `<header>`.
+39. Replace the comment `{/* Header will go here... */}` with a reference to our `<Header />` component. As you can see, by making our component names Uppercased, it makes it easier to tell the difference between the component `<Header />` vs. the html element `<header>`.
 
 40. Replace the comment`{/* Sidebar will go here... */}` with a reference to our `<Sidebar />` component.
 
 41. Replace the comment `{/* Main content will go here... */}` with a reference to our `<Main />` component.
 
-## CSS To Make Pretty
+## CSS To Make It Pretty
 
 42. Inside **/src/App.js** at the top of the file below the other imports add the following line to import your `App.css` file
 
