@@ -2,7 +2,7 @@
 
 All the pieces of your web app can be thought of as components. For example let's say you have a web app that allows users to search for different types of wine based on what they like and the app will display matching wine with reviews and links to purchase. The search box can be one component called Search, the area that displays the search results can be another component called Results. Each individual search result can be a component called Wine. Inside each Wine component can be broken down into child components for each part such as Description, Reviews, and Purchase buttons. Essentially components are the individual building blocks of our user interface. React makes it easy to create reusable components can can be copied from project to project. React also ensures that changes to our application state will be displayed in our components. For example when a user clicks the Purchase button component the Cart component should update to show the products in cart count has increased to 1 item in their Cart.
 
-Note: React lets you define components as classes or functions. This course will primarily focus on creating components using functions. It is useful to know this method as at the time of writing this, many existing react applications still use class components. However, more and more new applications are being developed using functional components and React hooks. After this course consider spending some time to learn this alternate way of creating components.
+Note: React lets you define components as classes or functions. This course will primarily focus on creating components using functions. However, it is useful to know the class method as, at the time of writing this, many existing React applications still use class components. However, more and more new applications are being developed using functional components and React hooks. After this course consider spending some time to learn this alternate way of creating components.
 
 ## Class based components
 
@@ -56,10 +56,10 @@ class Wine extends Component {
 export default Wine;
 ```
 
-Since we have exported our Wine component we can now import it into another file. Let's say we saved the code above into a file called wine.js Then in another file we can import it. here we are importing from `./` meaning the same folder.
+Since we have exported our Wine component we can now import it into another file. Let's say we saved the code above into a file called `Wine.js`. Then, in another file, we can import it. Here we are importing from `./` meaning the same folder.
 
 ```javascript
-import Wine from "./wine";
+import Wine from "./Wine";
 ```
 
 This allows our React components to be organized in separate files and makes them modular and reusable.
@@ -71,7 +71,7 @@ In order to render our class component into our web app we can pass the componen
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Wine from "./wine"; // This is importing our component!
+import Wine from "./Wine"; // This is importing our component!
 
 ReactDOM.render(<Wine />, document.getElementById("root")); // This is rendering our component into the DOM.
 ```
@@ -92,7 +92,7 @@ function Wine() {
 export default Wine;
 ```
 
-Pretty cool that was less code. Notice that the JSX can simply be returned without needing to be wrapped in an render method. You might also see developers using arrow function syntax instead:
+One immediately obvious point in favor of Functional components is that they use less code. Notice also that the JSX can simply be returned without needing to be wrapped in an render method. You might also see developers using arrow function syntax instead:
 
 ```jsx
 import React from "react";
@@ -108,7 +108,7 @@ All of these ways of writing functional components will produce the same result.
 
 ## Nesting Components
 
-We can nest one component inside another by including it by name inside a block of JSX code.
+We can nest one component inside another by including it by name inside a block of JSX code. We refer to them just as if they're built-in HTML elements, usually as self-closing tags.
 
 ```jsx
 import React, { Component } from "react";
@@ -130,7 +130,7 @@ class TaskList extends Component {
 }
 ```
 
-As you can see we nested the Task component inside of the TaskList component. If we tell ReactDOM to render the TaskList component this is what we would see in the browser.
+As you can see we nested the Task component inside of the TaskList component. If we tell ReactDOM to render the TaskList component, this is what we would see in the browser.
 
 ```html
 <ul>

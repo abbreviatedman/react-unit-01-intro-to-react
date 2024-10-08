@@ -28,11 +28,11 @@ We are going to make a goldfish forum website page by combining different compon
 
 ## Exercise Assets
 
-7. Move the image files from the _/assets\*\* folder outside the create-react-app project folder into the create-react-app folder _/public/\*\* this way the images will be accessible to your application.
+7. Move the image files from the `assets` folder outside the `create-react-app` project folder into the `create-react-app` folder `public/`--this way the images will be accessible to your application.
 
 ## Creating the App Component
 
-10. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import react and create a functional component called App. Finally, export it at the bottom. This will create the following code:
+10. Open **/src/App.js**. This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called App. Finally, export it at the bottom. This will create the following code:
 
 ```jsx
 import React from 'react';
@@ -71,7 +71,7 @@ The render method of ReactDOM is being passed our `<App />` component. The `<Rea
 
 ## Applying CSS Classes
 
-15. Erase the text "Hello World" from inside the render method. Add the attribute `className=""` inside the `<div>` and give it the Bootstrap class name of `container-fluid`.
+15. Erase the text "Hello World" from inside the `div`. Add the attribute `className=""` inside the `<div>` and give it the Bootstrap class name of `container-fluid`.
 
 ```jsx
 function App() {
