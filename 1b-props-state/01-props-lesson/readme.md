@@ -55,7 +55,7 @@ The end result here is that the browser will display all three greetings each wi
 What if wanted to not only pass the name but also the age of each user and whether they are living or dead? We can simply add additional prop attributes as needed.
 
 ```jsx
-<Greeting name="Rick" age={73} alive={true} />
+<Greeting name="Rick" age={73} isAlive={true} />
 ```
 
 Notice that when passing a string we used `""` quotes, where as we used `{}` curly braces when passing a number. This is because strings are naturally captured in quotes, while curly braces are needed for all other data types because the data is moving in JavaScript and all JavaScript in JSX needs to be wrapped in curly braces.
@@ -67,7 +67,7 @@ function Greeting(props) {
   return (
     <h1>
       Hey {props.name}, You are {props.age} years old.
-      {props.alive
+      {props.isAlive
         ? "Congrats on being alive"
         : "You appear to have died on this adventure, better make a clone!"}
     </h1>
@@ -84,7 +84,7 @@ function Greeting(props) {
   return (
     <h1>
       Hey {props.name}, You are {props.age} years old.{" "}
-      {props.alive
+      {props.isAlive
         ? "Congratulations on being alive!"
         : "You appear to have died on this adventure, better make a clone!"}
     </h1>
@@ -94,9 +94,9 @@ function Greeting(props) {
 function App() {
   return (
     <div className="App">
-      <Greeting name="Rick" age={73} alive={true} />
-      <Greeting name="Morty" age={13} alive={false} />
-      <Greeting name="Summer" age={17} alive={true} />
+      <Greeting name="Rick" age={73} isAlive={true} />
+      <Greeting name="Morty" age={13} isAlive={false} />
+      <Greeting name="Summer" age={17} isAlive={true} />
     </div>
   );
 }
@@ -122,18 +122,18 @@ The final result in the browser is:
 Aside from passing strings, numbers, boolean values, we can also pass objects, arrays, and functions. First let's look at passing those same props above as a single object.
 
 ```jsx
-<Greeting person={{ name: "Rick", age: 73, alive: true }} />
+<Greeting person={{ name: "Rick", age: 73, isAlive: true }} />
 ```
 
-Remember that props are already an object, and by passing in another one our object will be nested inside of the props object. Now to retrieve these individual props in a class component it would be done like this:
+Remember that props are already an object, and by passing in another one our object will be nested inside of the props object. Now to retrieve these individual props in a component it would be done like this:
 
 ```jsx
 function Greeting(props) {
   return (
     <h1>
       Hey {props.person.name}, You are {props.person.age} years old.{" "}
-      {props.person.alive
-        ? "Congratulations on being alive!"
+      {props.person.isAlive
+        ? "Congratulations on being isAlive!"
         : "You appear to have died on this adventure, better make a clone!"}
     </h1>
   );
@@ -176,7 +176,7 @@ let data = [
     id: 1,
     name: "Rick",
     age: 73,
-    alive: true,
+    isAlive: true,
     favoriteThings: [
       "McNuggies with Szechaun Sauce",
       "Kalaxian Crystals",
@@ -187,14 +187,14 @@ let data = [
     id: 2,
     name: "Morty",
     age: 13,
-    alive: false,
+    isAlive: false,
     favoriteThings: ["Jessica", "Yummy' Yums", "Eyeholes"],
   },
   {
     id: 3,
     name: "Summer",
     age: 17,
-    alive: false,
+    isAlive: false,
     favoriteThings: ["Snake Jazz", "Being Queen", "Parties"],
   },
 ];
@@ -202,10 +202,10 @@ let data = [
 function App() {
   return (
     <div className="App">
-      {/* <Greeting name="Rick" age={73} alive={true}/> */}
+      {/* <Greeting name="Rick" age={73} isAlive={true}/> */}
       {/* <Favorites faves={["McNuggies with Szechuan Sauce", "Kalaxian Crystals", "Portal Fluid"]} /> */}
-      {/* <Greeting name="Morty" age={13} alive={false}/> */}
-      {/* <Greeting name="Summer" age={17} alive={true}/> */}
+      {/* <Greeting name="Morty" age={13} isAlive={false}/> */}
+      {/* <Greeting name="Summer" age={17} isAlive={true}/> */}
 
       <ul>
         {data.map((char) => (
@@ -213,7 +213,7 @@ function App() {
             key={char.id}
             name={char.name}
             age={char.age}
-            alive={char.alive}
+            isAlive={char.isAlive}
           />
         ))}
       </ul>
@@ -238,10 +238,10 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Greeting name="Rick" age={73} alive={true}/> */}
+      {/* <Greeting name="Rick" age={73} isAlive={true}/> */}
       {/* <Favorites faves={["McNuggies with Szechuan Sauce", "Kalaxian Crystals", "Portal Fluid"]} /> */}
-      {/* <Greeting name="Morty" age={13} alive={false}/> */}
-      {/* <Greeting name="Summer" age={17} alive={true}/> */}
+      {/* <Greeting name="Morty" age={13} isAlive={false}/> */}
+      {/* <Greeting name="Summer" age={17} isAlive={true}/> */}
 
       <ul>
         {data.map((char) => (
@@ -250,7 +250,7 @@ function App() {
             name={char.name}
             greetAlert={greet}
             age={char.age}
-            alive={char.alive}
+            isAlive={char.isAlive}
             faves={char.favoriteThings}
           />
         ))}
@@ -268,7 +268,7 @@ function Greeting(props) {
     <div>
       <h1>
         Hey {props.name}, You are {props.age} years old.
-        {props.alive
+        {props.isAlive
           ? "Congrats on being alive"
           : "You appear to have died on this adventure, better make a clone!"}
       </h1>
