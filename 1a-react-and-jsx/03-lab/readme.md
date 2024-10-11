@@ -263,7 +263,7 @@ Here is the updated code for Main:
 function Main() {
   return (
     <main className="col-md-10">
-      <div className="frame" style={frameStyle}>
+      <div className="frame">
         <img src="/oranda.png" alt="Oranda" />
       </div>
       <p>
