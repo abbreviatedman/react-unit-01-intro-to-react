@@ -6,7 +6,7 @@
 
 We are going to make a goldfish forum website page by combining different components each making up a different part of the page content.
 
-## Setup a new Create-React-App project
+## SeT Up a new Create-React-App project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 
@@ -24,7 +24,7 @@ We are going to make a goldfish forum website page by combining different compon
 
 ## Import Bootstrap
 
-6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**. This way we can override the bootstrap styles with our own inside Index.css if we wish to.
+6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
 
 ## Exercise Assets
 

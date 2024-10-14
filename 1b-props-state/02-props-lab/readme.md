@@ -24,7 +24,7 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 ## Import Bootstrap
 
-6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the bootstrap styles with our own inside Index.css if we wish to.
+6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
 
 ## Exercise Assets
 

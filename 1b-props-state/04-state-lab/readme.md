@@ -2,11 +2,11 @@
 
 ![Exercise Preview](./state-exercise-preview.png)
 
-## Exercise overview
+## Exercise Overview
 
 In this exercise we will be building a task list that will allow users to write a list of things they want to remember to do. They should be able to add new items and remove existing items from the list. They should be able to set an importance level: low, medium, or high and this should effect the background color of each task.
 
-## Setup a new Create-React-App project
+## SeT up A New Create-React-App Project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 
@@ -16,19 +16,19 @@ In this exercise we will be building a task list that will allow users to write 
 
 ## Exercise Assets
 
-4. Move the image files from the _/assets\*\* folder outside the create-react-app project folder into the create-react-app folder _/public/\*\* this way the images will be accessible to your application.
+4. Move the image files from the `assets` folder outside the create-react-app project folder into the create-react-app folder `public`, so that the images will be accessible to your application.
 
 ## Install Bootstrap
 
-5. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal type `npm i bootstrap@5.2.3`. This will install the package into our project.
+5. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
 ## Start Node Test Server
 
-6. In terminal type `npm start` to start a node test server this should open a new tab in your browser to **localhost:3000**.
+6. In terminal, type `npm start` to start a node test server. This should open a new tab in your browser for **localhost:3000**.
 
 ## Import Bootstrap
 
-7. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**.
+7. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**.
 
 ## Creating the App Component
 
@@ -189,7 +189,7 @@ const initialTasks = [
 const [tasks, setTasks] = useState(initialTasks);
 ```
 
-## Displaying multiple Tasks and Passing State through Props
+## Displaying Multiple Tasks And Passing State Through Props
 
 24. Replace the single instance of the `<Task />` with the following code:
 
@@ -242,7 +242,7 @@ function App() {
 export default App;
 ```
 
-## Receiving the State Passed As Prop to the Child Component
+## Receiving The State Passed As Prop To The Child Component
 
 25. Open **/src/Task.js**, and replace the dummy text "Walk the dog." with `{ props.task.description }`.
 
@@ -259,7 +259,7 @@ function Task(props) {
 
 26. Save all the files and head to the browser. You should see the three tasks displaying.
 
-## Adding new data to our state
+## Adding New Data To Our State
 
 27. Open **/src/App.js**, and inside our `App` component above our `return()` statement we will create a new function to handle form submissions to create a new task and update our state.
 
@@ -329,7 +329,7 @@ function handleSubmit(e) {
 
 32. Save all files and check your work in the browser. At this point, you should be able to type new task descriptions and submitting the form will add your new task displayed on screen.
 
-## Removing data in our state
+## Removing Data In Our State
 
 We would like the "X" buttons next to each task to remove that task from our state and thus remove the task from our screen.
 
@@ -388,7 +388,7 @@ Note that we are using `parseInt()` to convert the id number which is a type of 
 
 39. Save all your files and test in the browser. Now the remove buttons work to remove tasks.
 
-## Adding style to each task based on importance
+## Adding Style To Each Task Based On Importance
 
 40. In **/src/App.js** add this CSS file import code after the other imports
 
