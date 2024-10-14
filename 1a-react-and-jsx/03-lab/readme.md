@@ -30,6 +30,8 @@ We are going to make a goldfish forum website page by combining different compon
 
 7. Move the image files from the `assets` folder outside the `create-react-app` project folder into the `create-react-app` folder `public/`--this way the images will be accessible to your application.
 
+**Each image should be in the `public` folder _directly_**, not in any other intermediate folder (not even in the `assets` folder)
+
 ## Creating the App Component
 
 10. Open **/src/App.js**. This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called App. Finally, export it at the bottom. This will create the following code:
