@@ -1,10 +1,10 @@
 # Components
 
-All the pieces of your web app can be thought of as components. For example let's say you have a web app that allows users to search for different types of wine based on what they like and the app will display matching wine with reviews and links to purchase. The search box can be one component called Search, the area that displays the search results can be another component called Results. Each individual search result can be a component called Wine. Inside each Wine component can be broken down into child components for each part such as Description, Reviews, and Purchase buttons. Essentially components are the individual building blocks of our user interface. React makes it easy to create reusable components can can be copied from project to project. React also ensures that changes to our application state will be displayed in our components. For example when a user clicks the Purchase button component the Cart component should update to show the products in cart count has increased to 1 item in their Cart.
+All the pieces of your web app can be thought of as components. For example, let's say you have a web app that allows users to search for different types of wine based on what they like and the app will display matching wine with reviews and links to purchase. The search box can be one component called Search, the area that displays the search results can be another component called Results. Each individual search result can be a component called Wine. Inside each Wine component can be broken down into child components for each part such as Description, Reviews, and Purchase buttons. Essentially, components are the individual building blocks of our user interface. React makes it easy to create reusable components can can be copied from project to project. React also ensures that changes to our application state will be displayed in our components. For example, when a user clicks the Purchase button component the Cart component should update to show the products in cart count has increased to 1 item in their Cart.
 
 Note: React lets you define components as classes or functions. This course will primarily focus on creating components using functions. However, it is useful to know the class method as, at the time of writing this, many existing React applications still use class components. However, more and more new applications are being developed using functional components and React hooks. After this course consider spending some time to learn this alternate way of creating components.
 
-## Class based components
+## Class-Based Components
 
 In order to give our class all the super powers of a React Component we must extend our class. Here we will create the simplest possible class component and we will add to it with additional features as we go. Let's create a component for our wine.
 
@@ -20,7 +20,7 @@ class Wine extends Component {
 
 React Component classes must contain a render method that returns a single JSX element. In the code above, ours is returning a heading with the name of our wine.
 
-## Import usage
+## Import Usage
 
 Sometimes we may see developers write their import and extends this way:
 
@@ -40,7 +40,7 @@ class Wine extends Component {}
 
 Both ways shown here will work and in the wild you may see it written both ways.
 
-## Reusing components in other files
+## Reusing Components In Other Files
 
 In order to be able to use our wine in another component, we must remember to export it. For more on import and export see [https://www.geeksforgeeks.org/es6-import-and-export/](https://www.geeksforgeeks.org/es6-import-and-export/)
 
@@ -64,7 +64,7 @@ import Wine from "./Wine";
 
 This allows our React components to be organized in separate files and makes them modular and reusable.
 
-## Rendering components
+## Rendering Components
 
 In order to render our class component into our web app we can pass the component to ReactDOM the way we learned before. Imagine this is a separate file so we import in
 
