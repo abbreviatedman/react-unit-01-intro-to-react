@@ -111,22 +111,18 @@ All of these ways of writing functional components will produce the same result.
 We can nest one component inside another by including it by name inside a block of JSX code. We refer to them just as if they're built-in HTML elements, usually as self-closing tags.
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 
-class Task extends Component {
-  render() {
-    return <li>Walk the dog</li>;
-  }
+function Task () {
+  return <li>Walk the dog</li>;
 }
 
-class TaskList extends Component {
-  render() {
-    return (
-      <ul>
-        <Task />
-      </ul>
-    );
-  }
+function TaskList () {
+  return (
+    <ul>
+      <Task />
+    </ul>
+  );
 }
 ```
 
