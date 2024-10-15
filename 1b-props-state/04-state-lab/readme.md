@@ -6,13 +6,13 @@
 
 In this exercise we will be building a task list that will allow users to write a list of things they want to remember to do. They should be able to add new items and remove existing items from the list. They should be able to set an importance level: low, medium, or high and this should effect the background color of each task.
 
-## SeT up A New Create-React-App Project
+## Set Up A New Create-React-App Project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 
-2. In Terminal type `npx create-react-app task-list`. Here we are naming our project task-list. Wait while a new project is setup... It will display "Happy hacking!" when it's done.
+2. In your terminal, type `npx create-react-app task-list`. Here we are naming our project `task-list`. Wait while a new project is set up. It will display "Happy hacking!" when it's done.
 
-3. Then in Terminal type `cd task-list` to enter the project folder.
+3. Then, in your terminal, type `cd task-list` to enter the project folder.
 
 ## Exercise Assets
 
@@ -20,15 +20,15 @@ In this exercise we will be building a task list that will allow users to write 
 
 ## Install Bootstrap
 
-5. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
+5. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In your terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
 ## Start Node Test Server
 
-6. In terminal, type `npm start` to start a node test server. This should open a new tab in your browser for **localhost:3000**.
+6. In your terminal, type `npm start` to start a node test server. This should open a new tab in your browser for **localhost:3000**.
 
 ## Import Bootstrap
 
-7. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**.
+7. Then, in VS Code, open the **/src/index.js** file and import the bootstrap css styles by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import of ReactDOM and just before our import of **index.css**.
 
 ## Creating the App Component
 
